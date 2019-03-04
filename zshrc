@@ -32,3 +32,8 @@ export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bi
 export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1"
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
+export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
+
+. /usr/local/opt/asdf/asdf.sh
+export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
+export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
