@@ -8,6 +8,18 @@ backup() {
   fi
 }
 
+# Check for Homebrew and install if we don't have it
+if test ! $(which brew); then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+# Update Homebrew recipes
+brew update
+
+# Install all our dependencies with bundle (See Brewfile)
+brew tap homebrew/bundle
+brew bundle
+
 #!/bin/zsh
 for name in *; do
   if [ ! -d "$name" ]; then
@@ -60,5 +72,48 @@ ln -s $PWD/Preferences.sublime-settings $SUBL_PATH/Packages/User/Preferences.sub
 ln -s $PWD/Package\ Control.sublime-settings $SUBL_PATH/Packages/User/Package\ Control.sublime-settings
 
 zsh ~/.zshrc
+
+# Install global NPM packages
+npm install --global yarn
+
+installAsdf() {
+	# Clone repository
+	# echo "[INFO] Cloning asdf repository...";
+	# git clone https://github.com/asdf-vm/asdf.git ~/.asdf;
+
+	echo '. $HOME/.asdf/asdf.sh' >> ~/.zshrc
+	echo '. $HOME/.asdf/completions/asdf.bash' >> ~/.zshrc
+	source ~/.zshrc
+
+	# Install useful plugins (at least for me :D)
+	echo "[INFO] Installing asdf plugins...";
+	source $HOME/.asdf/asdf.sh;
+
+	asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git;
+	asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git;
+	asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git;
+  asdf plugin-add elm
+  asdf plugin-add java
+  asdf plugin-add maven
+  asdf plugin-add mongodb
+  asdf plugin-add nodejs
+  asdf plugin-add postgres
+	bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring;
+	# asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git;
+	# asdf plugin-add terraform https://github.com/Banno/asdf-hashicorp.git;
+	# asdf plugin-add packer https://github.com/Banno/asdf-hashicorp.git;
+
+  #install differents tools
+  asdf install ruby 2.6.2
+  asdf install ruby 2.5.1
+  asdf install maven 3.6.0
+  asdf install mongodb 3.4.15
+  asdf install nodejs 8.14.0
+  asdf install postgres 10.5
+}
+
+doIt() {
+	installAsdf;
+}
 
 echo "👌  Carry on with git setup!"
