@@ -1,4 +1,11 @@
 tap "homebrew/cask"
+# cask
+cask 'chromedriver'
+cask 'java'
+cask 'postico'
+cask 'wkhtmltopdf'
+cask 'visual-studio-code'
+
 brew 'asdf'
 brew 'direnv'
 brew 'elixir'
@@ -17,11 +24,4 @@ brew 's3cmd'
 brew 'tmux'
 brew 'tomcat@7'
 brew 'wget'
-brew 'zsh'
-
-# cask
-cask 'chromedriver'
-cask 'java'
-cask 'postico'
-cask 'wkhtmltopdf'
-cask 'visual-studio-code'
+brew 'npm'
