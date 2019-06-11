@@ -1,0 +1,9 @@
+{
+	"ignored_packages":
+	[
+		"AdvancedNewFile",
+		"BracketHighlighter",
+		"JSX",
+		"Vintage"
+	]
+}

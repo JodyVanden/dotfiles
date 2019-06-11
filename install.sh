@@ -11,20 +11,20 @@ backup() {
   fi
 }
 
-# # Check for Homebrew and install if we don't have it
-# echo "Check for Homebrew and install if we don't have it"
-# if test ! $(which brew); then
-#   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-# fi
+# Check for Homebrew and install if we don't have it
+echo "Check for Homebrew and install if we don't have it"
+if test ! $(which brew); then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
-# # Update Homebrew recipes
-# echo "update homebrew"
-# brew update
+# Update Homebrew recipes
+echo "update homebrew"
+brew update
 
-# # Install all our dependencies with bundle (See Brewfile)
-# echo "install all dependencies from the BrewFile"
-# brew tap homebrew/bundle
-# brew bundle
+# Install all our dependencies with bundle (See Brewfile)
+echo "install all dependencies from the BrewFile"
+brew tap homebrew/bundle
+brew bundle
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 #!/bin/zsh
@@ -95,7 +95,7 @@ zsh<<CONFIG
   asdf install mongodb 3.4.15
   asdf install nodejs 8.14.0
   asdf install postgres 10.5
-  asdf install elixir 1.7.3
+  asdf install elixir 1.8.2
 CONFIG
 
 echo "👌  Carry on with git setup!"
