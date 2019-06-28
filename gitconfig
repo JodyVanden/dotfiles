@@ -39,6 +39,12 @@
   # Removes a file from the index
   unstage = reset HEAD --
 
+  ## Sam's aliases
+  current-branch = "!f() { git symbolic-ref --short HEAD 2>/dev/null; }; f"
+  changed-files = "!f() { (git diff --name-only $(git current-branch) $(git merge-base $(git current-branch) master) "$@"; git ls-files --modified "$@") | sort | uniq; }; f"
+  rspec = "!(git changed-files *_spec.rb; git changed-files *.rb | xargs -n 1 -- basename | sed -e 's/.rb/_spec.rb/' | xargs -n 1 -- git f 2>/dev/null) | xargs -t -- rspec"
+  rubocop = "!git changed-files *.rb | xargs -t -- rubocop"
+
 [help]
   autocorrect = 1
 
