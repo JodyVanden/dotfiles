@@ -34,3 +34,7 @@ export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
 source /usr/local/opt/asdf/asdf.sh
 . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 export BUNDLER_EDITOR="code"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
