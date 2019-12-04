@@ -1,4 +1,6 @@
 tap "homebrew/cask"
+tap "mongodb/brew"
+
 # cask
 cask 'chromedriver'
 cask 'java'
@@ -6,6 +8,7 @@ cask 'postico'
 cask 'wkhtmltopdf'
 cask 'visual-studio-code'
 
+puts "asdf"
 brew 'asdf'
 brew 'direnv'
 brew 'elixir'
@@ -18,7 +21,7 @@ brew 'imagemagick'
 brew 'jq'
 brew 'lastpass-cli'
 brew 'maven'
-brew 'mongodb@3.4'
+brew 'mongodb-community@3.4'
 brew 'postgresql'
 brew 's3cmd'
 brew 'tmux'

@@ -10,6 +10,15 @@ alias rspec='bundle exec rspec'
 alias vs='code .'
 alias c='clear'
 
+docker() {
+  if [[ $1 == 'kill-all' ]]; then
+   echo "dockerkillall"
+   command docker container kill $(docker ps -q)
+   else
+     command docker "$@"
+  fi
+}
+
 fbr() {
     local branches branch
     branches=$(git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format="%(refname:short)")  && branch=$(echo "$branches" |
