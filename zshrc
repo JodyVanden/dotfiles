@@ -29,8 +29,7 @@ export LC_ALL=en_US.UTF-8
 # export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 export BUNDLER_EDITOR="'\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin'"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home"
-
-export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
+# export PATH="/usr/local/opt/mongodb-community@3.4/bin:$PATH"
 source /usr/local/opt/asdf/asdf.sh
 . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 export BUNDLER_EDITOR="code"
@@ -38,3 +37,10 @@ export BUNDLER_EDITOR="code"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/opt/mongodb-community@3.4/bin:$PATH"
+
+# mysql alias
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
