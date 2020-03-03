@@ -9,6 +9,7 @@ alias serve='ruby -run -e httpd . -p 8000'  # Or python -m SimpleHTTPServer :)
 alias rspec='bundle exec rspec'
 alias vs='code .'
 alias c='clear'
+alias pc='perform-cli'
 
 docker() {
   if [[ $1 == 'kill-all' ]]; then
