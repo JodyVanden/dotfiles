@@ -4,9 +4,6 @@ ZSH=$HOME/.oh-my-zsh
 #   https://github.com/robbyrussell/oh-my-zsh/wiki/themes
 ZSH_THEME="robbyrussell"
 
-# Add ruby version on prompt (float right)
-if [ -x "$(command -v rbenv)" ]; then RPS1='[$(ruby_prompt_info)]$EPS1'; fi
-
 # Useful plugins for Rails development with Sublime Text
 plugins=(gitfast brew last-working-dir common-aliases zsh-syntax-highlighting)
 
