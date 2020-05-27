@@ -73,6 +73,6 @@
     "standard": true
   },
   "[ruby]": {
-    "editor.defaultFormatter": "rebornix.ruby",
+    "editor.defaultFormatter": "rebornix.ruby"
   }
 }

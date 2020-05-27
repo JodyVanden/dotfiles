@@ -98,4 +98,8 @@ zsh<<CONFIG
   asdf install elixir 1.8.2
 CONFIG
 
+## install vs code
+echo "install vscode and extensions"
+sh './vscode/install.sh'
+
 echo "👌  Carry on with git setup!"
