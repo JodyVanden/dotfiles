@@ -36,5 +36,8 @@ export PATH="/usr/local/opt/mongodb-community@3.4/bin:$PATH"
 # mysql alias
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
