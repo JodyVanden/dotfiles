@@ -59,8 +59,8 @@ cd "$CURRENT_DIR"
 
 # Update these to the visual studio code path
 git config --global core.editor "code -w"
-bundler_editor="code"
-echo "export BUNDLER_EDITOR=\"${bundler_editor}\"" >> zshrc
+# bundler_editor="code"
+# echo "export BUNDLER_EDITOR=\"${bundler_editor}\"" >> zshrc
 
 # Install global NPM packages
 echo "NPM Install"
