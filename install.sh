@@ -25,7 +25,7 @@ brew update
 echo "install all dependencies from the BrewFile"
 brew tap homebrew/bundle
 brew bundle
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 #!/bin/zsh
 for name in *; do

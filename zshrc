@@ -41,3 +41,5 @@ fpath=(${ASDF_DIR}/completions $fpath)
 
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
+source /usr/local/opt/asdf/asdf.sh
+. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
