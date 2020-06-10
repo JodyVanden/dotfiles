@@ -2,7 +2,7 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "417d7ab067d1e50617ef3f396438bd7124f3ca1f"
+        "revision": "f51d51a20ad85d2062512d40d97c550198d63b80"
       },
       "mongodb/brew": {
         "revision": "01c5e9bf5975846526c712e9c500369275082552"
@@ -209,22 +209,22 @@
         }
       },
       "imagemagick": {
-        "version": "7.0.10-14",
+        "version": "7.0.10-16",
         "bottle": {
           "cellar": "/usr/local/Cellar",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-14.catalina.bottle.tar.gz",
-              "sha256": "bd188f22ea4373a97496a1f469d02bc72c6ff38f0b74c9fba7f5ad480d431b24"
+              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-16.catalina.bottle.tar.gz",
+              "sha256": "9fa91b9807a7b136e0326978c0cefb163c819c919584dfcdccd2626892f69e4c"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-14.mojave.bottle.tar.gz",
-              "sha256": "575bfca45640c48a9228e8be95c3606b813faa31ad00aad7795e1a1de7d4fb59"
+              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-16.mojave.bottle.tar.gz",
+              "sha256": "33244b953157c062224843dd197b4d225ba05ec0064b8e70c93f5770d89ddae4"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-14.high_sierra.bottle.tar.gz",
-              "sha256": "96207139743ea91a5ce433a8a2d441376008eae5d18827cfb9aa21f5fea44829"
+              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-16.high_sierra.bottle.tar.gz",
+              "sha256": "ba876799fe0877e634fd57dbf353abc2a2337b48360945dc1b6f043fd40816d7"
             }
           }
         }
@@ -288,22 +288,22 @@
         "bottle": false
       },
       "postgresql": {
-        "version": "12.3_3",
+        "version": "12.3_4",
         "bottle": {
           "cellar": "/usr/local/Cellar",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/postgresql-12.3_3.catalina.bottle.tar.gz",
-              "sha256": "f669793743849ffa5a02fee6942dd0acf73a718ec4291b936bdff1a2907183e8"
+              "url": "https://homebrew.bintray.com/bottles/postgresql-12.3_4.catalina.bottle.tar.gz",
+              "sha256": "069912aa3d10ecb548eb2dddd7e3e1be61d1689d236b5993bce3e1a31811bcd0"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/postgresql-12.3_3.mojave.bottle.tar.gz",
-              "sha256": "7d471063e15a2f2e361fa90d102c9f49c78e4d062909eabd801eaff0160e716b"
+              "url": "https://homebrew.bintray.com/bottles/postgresql-12.3_4.mojave.bottle.tar.gz",
+              "sha256": "06eb65f3f17b6bf08344cbae35adc295f5c6da22420ee81d1e8fe2787e05a03b"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/postgresql-12.3_3.high_sierra.bottle.tar.gz",
-              "sha256": "dd4506b7af84a92c98ee3506167e688a68dd44b2cd9cde10b8ec1e0ec5e96b03"
+              "url": "https://homebrew.bintray.com/bottles/postgresql-12.3_4.high_sierra.bottle.tar.gz",
+              "sha256": "93e3b484a26931374ece4ee4f5abd4b3eac0a6e519d2fba696871f2342f0e513"
             }
           }
         }
@@ -402,10 +402,10 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.2.17",
+        "HOMEBREW_VERSION": "2.3.0",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "051c129736b6d76eacb8e1860589dd738da20ef3",
-        "CLT": "11.0.0.0.1.1567737322",
+        "Homebrew/homebrew-core": "be0ae76d139618a61d98b2ad0a65c49909c3d7bc",
+        "CLT": "11.5.0.0.1.1588476445",
         "Xcode": "11.4.1",
         "macOS": "10.15.5"
       }
