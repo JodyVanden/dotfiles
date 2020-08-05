@@ -90,9 +90,9 @@ zsh<<CONFIG
 
   #install differents tools
   asdf install ruby 2.6.2
-  asdf install ruby 2.5.1
+  # asdf install ruby 2.5.1
   asdf install maven 3.6.0
-  asdf install mongodb 3.4.15
+  #asdf install mongodb 3.4.15
   asdf install nodejs 8.14.0
   asdf install postgres 10.5
   asdf install elixir 1.8.2

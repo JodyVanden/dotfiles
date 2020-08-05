@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 # Useful plugins for Rails development with Sublime Text
-plugins=(gitfast brew last-working-dir common-aliases zsh-syntax-highlighting)
+plugins=(git gitfast brew last-working-dir common-aliases zsh-syntax-highlighting)
 
 # Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
@@ -24,14 +24,12 @@ export PATH="./bin:${PATH}:/usr/local/sbin"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export EDITOR="$(which code)"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home"
-# export PATH="/usr/local/opt/mongodb-community@3.4/bin:$PATH"
-source /usr/local/opt/asdf/asdf.sh
+
+export PROMPT_COMMAND=prompt_command
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH="/usr/local/opt/mongodb-community@3.4/bin:$PATH"
 
 # mysql alias
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
@@ -41,5 +39,10 @@ fpath=(${ASDF_DIR}/completions $fpath)
 
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
-source /usr/local/opt/asdf/asdf.sh
-. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+# source /usr/local/opt/asdf/asdf.sh
+. $HOME/.asdf/asdf.sh
+
+# setup intellij terminal
+POWERLEVEL9K_MODE="awesome-fontconfig"
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status ram load time)
