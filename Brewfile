@@ -7,6 +7,7 @@ cask 'java'
 cask 'postico'
 cask 'wkhtmltopdf'
 cask 'visual-studio-code'
+cask 'meetingbar'
 
 puts "asdf"
 brew 'asdf'
