@@ -59,3 +59,5 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status ram load time)
 
 export HOST_IP=`ifconfig | grep 'inet .*br' | sed -E 's/.*inet (.*) netmask.*/\1/'`
+
+launchctl setenv CARD_DB_PORT 3307
