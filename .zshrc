@@ -58,4 +58,17 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status ram load time)
 
 export HOST_IP=`ifconfig | grep 'inet .*br' | sed -E 's/.*inet (.*) netmask.*/\1/'`
 
+# Afterpay setup
 launchctl setenv CARD_DB_PORT 3307
+
+# Load Git completion
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+fpath=(~/.zsh $fpath)
+
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
+
+# unlock gradle
+gradleUnlock() {
+    find ~/.gradle -type f -name "*.lock" | while read f; do rm $f; done
+}
