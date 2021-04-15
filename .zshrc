@@ -12,7 +12,7 @@ plugins=(
     last-working-dir
     common-aliases
     zsh-syntax-highlighting
-    gradle-completion
+    gradle
     terraform
     node
     npm
@@ -46,10 +46,8 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 # append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
+# fpath=(${ASDF_DIR}/completions $fpath)
 
-# initialise completions with ZSH's compinit
-autoload -Uz compinit && compinit
 # source /usr/local/opt/asdf/asdf.sh
 . $HOME/.asdf/asdf.sh
 
