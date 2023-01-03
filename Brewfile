@@ -3,7 +3,7 @@ tap "mongodb/brew"
 
 # cask
 cask 'chromedriver'
-cask 'java'
+cask 'eclipse-java'
 cask 'postico'
 cask 'wkhtmltopdf'
 cask 'visual-studio-code'
@@ -22,6 +22,7 @@ brew 'imagemagick'
 brew 'jq'
 brew 'lastpass-cli'
 brew 'maven'
+brew 'gh'
 # brew 'mongodb-community@3.4'
 brew 'postgresql'
 brew 's3cmd'
