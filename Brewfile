@@ -1,16 +1,16 @@
-tap "homebrew/cask"
-tap "mongodb/brew"
-
 # cask
 cask 'chromedriver'
 cask 'eclipse-java'
 cask 'postico'
-cask 'wkhtmltopdf'
 cask 'visual-studio-code'
 cask 'meetingbar'
 
-puts "asdf"
-brew 'asdf'
+puts "mise"
+brew 'mise'
+brew 'python@3.12'
+brew 'libyaml'
+brew 'openssl@3'
+brew 'readline'
 brew 'direnv'
 brew 'elixir'
 brew 'eot-utils'
@@ -23,11 +23,9 @@ brew 'jq'
 brew 'lastpass-cli'
 brew 'maven'
 brew 'gh'
-# brew 'mongodb-community@3.4'
 brew 'postgresql'
 brew 's3cmd'
 brew 'tmux'
-brew 'tomcat@7'
 brew 'wget'
 brew 'npm'
 brew 'git-extras'

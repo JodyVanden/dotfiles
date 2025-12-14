@@ -23,7 +23,6 @@ brew update
 
 # Install all our dependencies with bundle (See Brewfile)
 echo "install all dependencies from the BrewFile"
-brew tap homebrew/bundle
 brew bundle
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
@@ -52,7 +51,7 @@ ZSH_PLUGINS_DIR="$HOME/.oh-my-zsh/custom/plugins"
 mkdir -p "$ZSH_PLUGINS_DIR" && cd "$ZSH_PLUGINS_DIR"
 if [ ! -d "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting" ]; then
   echo "-----> Installing zsh plugin 'zsh-syntax-highlighting'..."
-  git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 fi
 cd "$CURRENT_DIR"
 
@@ -66,36 +65,46 @@ git config --global core.editor "code -w"
 echo "NPM Install"
 npm install --global yarn
 
-echo "install ASDF"
-echo 'source /usr/local/opt/asdf/asdf.sh' >> ~/.zshrc
-echo '. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash' >> ~/.zshrc
+echo "install mise"
+echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
+
+# Ensure python is available (some build scripts need it)
+# Add Homebrew's Python to PATH if not already there
+export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+if ! command -v python &> /dev/null && command -v python3 &> /dev/null; then
+  # Create a local symlink in a user-writable location
+  mkdir -p ~/.local/bin
+  PYTHON3_PATH=$(which python3)
+  if [ -n "$PYTHON3_PATH" ]; then
+    ln -sf "$PYTHON3_PATH" ~/.local/bin/python 2>/dev/null || true
+    export PATH="$HOME/.local/bin:$PATH"
+  fi
+fi
 
 zsh<<CONFIG
+  # Ensure python is available (some build scripts need it)
+  export PATH="/opt/homebrew/bin:/usr/local/bin:$HOME/.local/bin:$PATH"
+  if ! command -v python &> /dev/null && command -v python3 &> /dev/null; then
+    mkdir -p ~/.local/bin
+    PYTHON3_PATH=$(which python3)
+    if [ -n "$PYTHON3_PATH" ]; then
+      ln -sf "$PYTHON3_PATH" ~/.local/bin/python 2>/dev/null || true
+    fi
+  fi
+  
   source ~/.zshrc
 
   # Install useful plugins (at least for me :D)
-  echo "[INFO] Installing asdf plugins...";
+  echo "[INFO] Installing mise plugins...";
 
-  asdf plugin-add ruby
-  asdf plugin-add nodejs
-  asdf plugin-add elixir
-  asdf plugin-add elm
-  asdf plugin-add java
-  asdf plugin-add maven
-  asdf plugin-add nodejs
-  bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring;
-  # asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git;
-  # asdf plugin-add terraform https://github.com/Banno/asdf-hashicorp.git;
-  # asdf plugin-add packer https://github.com/Banno/asdf-hashicorp.git;
+  mise plugin install ruby
+  mise plugin install nodejs
+  # mise plugin install packer
 
   #install differents tools
-  asdf install ruby 2.6.2
-  # asdf install ruby 2.5.1
-  asdf install maven 3.6.0
-  #asdf install mongodb 3.4.15
-  asdf install nodejs 8.14.0
-  asdf install postgres 10.5
-  asdf install elixir 1.8.2
+  mise install ruby@latest
+  mise install nodejs@8.14.0
+  mise install postgres@10.5
 CONFIG
 
 ## install vs code
